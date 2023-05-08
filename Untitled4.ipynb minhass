@@ -1,0 +1,299 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOK/g3gwbGqXlSX4f68Ecou",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/raelzim/Aulas-PHP/blob/main/Untitled4.ipynb%20minhass\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "kalJYQceIEfn"
+      },
+      "outputs": [],
+      "source": [
+        "#1 - Escreva uma função que Recebe uma lista de strings e retorna:\n",
+        " ## apenas as palavras que começam com a letra A\n",
+        " ## a quantidade de palavras encontradas\n",
+        "#2 - Escreva uma função que receba uma lista de números e retorne o produto desses números.\n",
+        "#3 - Escreva uma função que receba uma lista  "
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1\n",
+        "def palavras_comecam_com_a(lista_palavras):\n",
+        "    \"\"\"Retorna uma lista contendo somente as palavras que começam com a letra 'a'.\"\"\"\n",
+        "    palavras_com_a = []\n",
+        "    for palavra in lista_palavras:\n",
+        "        if palavra.startswith('a'):\n",
+        "            palavras_com_a.append(palavra)\n",
+        "    return palavras_com_a\n"
+      ],
+      "metadata": {
+        "id": "OHlOylYdMQ44"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "palavras = [\"arroz\", \"abacate\", \"maçã\", \"laranja\", \"alface\"]\n",
+        "print(palavras_comecam_com_a(palavras))  # Output: ['arroz', 'abacate', 'alface']\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cMVtcfKLQKXo",
+        "outputId": "370a8706-a560-4b45-d0a7-70340d1a5389"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['arroz', 'abacate', 'alface']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#2\n",
+        "def produto(numeros):\n",
+        "  resultado = 1\n",
+        "  for i in numeros:\n",
+        "    resultado *= i\n",
+        "  return resultado  \n",
+        "\n",
+        "number = [3, 4, 6, 88]\n",
+        "produto(number)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LDIkuiyfaDS0",
+        "outputId": "2f2eade4-b6de-42bf-bfe7-6ef58560a67d"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6336"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def somatorio(numeros):\n",
+        "  soma = 0\n",
+        "  for i in numeros:\n",
+        "   if i % 2 == 0:\n",
+        "    soma += i\n",
+        "  return soma \n",
+        "  \n"
+      ],
+      "metadata": {
+        "id": "AIYrzhi3hiZU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "somatorio(number)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xepyZ066h_b7",
+        "outputId": "31169d44-1206-4a45-9555-dc28dce88239"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "98"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 72
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4\n",
+        "nomes = ['zequinha', 'anastacia', 'josefina', 'amaralino']\n",
+        "\n",
+        "def maiorString(nomes): \n",
+        "  maior = ''\n",
+        "  for u in nomes:\n",
+        "   if(len(u) >= len(maior)):\n",
+        "    maior = u\n",
+        "  return maior\n",
+        "maiorString(nomes)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "YaJuRXwdj46I",
+        "outputId": "9c615473-6248-4995-8332-9840a2208104"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'amaralino'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Crie uma lista de frutas que retorna a quantidade de letras.\n",
+        "frutas = ['banana', 'pera', 'caja', 'manga']\n",
+        "lenfrutas = list(map(lambda x: len(x), frutas))\n",
+        "lenfrutas"
+      ],
+      "metadata": {
+        "id": "VI2KfrvjlpXF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2add2772-8b7e-4758-8dcc-cb98e858e0b4"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[6, 4, 4, 5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Crie uma lista de preços e some +2.\n",
+        "precos = [2.50, 2.99, 6.50]\n",
+        "newpreco = list(map(lambda x: x+2, precos))\n",
+        "newpreco"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OZVvToswuKnz",
+        "outputId": "1a84285c-8f26-4cb7-d420-52f306381da2"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[4.5, 4.99, 8.5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 29
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "notas = [6, 7, 3.5, 9, 6.5]\n",
+        "#aprovados apenas os aprovados....\n",
+        "aprovados = list(filter(lambda x : x>= 7, notas))\n",
+        "aprovados"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D1aaZuc6vGSz",
+        "outputId": "ebc7201f-8f25-4439-b2fa-5b570d469d57"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[7, 9]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "p7xJdy6dxFXd"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
