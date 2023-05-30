@@ -7,14 +7,15 @@
     <title>Document</title>
 </head>
 <body> 
-    
-   <center> <h1><h1>
-        <form id = "login" action = "logado.php" method = "Post">
-        login:<input type = "text" name = "login" required ><br><br>
-        senha:<input type = "passeword" name = "senha"required><br><br>
-        <input type = "submit" name = "entrar" value = "entrar"> 
-       </form> 
- </center>
+   <center> 
+        <h1>
+            <form id = "login" action = "logado.php" method = "POST">
+                login:<input type="text" name="login"><br>
+                senha:<input type="password" name="senha"><br>
+                <input type = "submit" name = "entrar" value = "entrar"> 
+            </form>
+        <h1> 
+    </center>
    
 </body>
 </html>
